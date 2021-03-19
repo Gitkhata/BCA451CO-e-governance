@@ -1,0 +1,284 @@
+\chapter{Data Warehousing and Data Mining in Government}
+
+\section{Introduction}
+Data warehousing and data mining are the important means of preparing the
+government to face the challenges of the present world.
+
+Data warehousing and data mining technologies have extensive potential
+applications in the government-in various Central Government sectors such as
+Agriculture, Rural Development, Health and Energy and also in State
+Government activities. These technologies can and should therefore be
+implemented.
+
+\subsection*{Data Warehousing}
+%Data warehousing is the process of constructing and using a data warehouse. A data warehouse is constructed by integrating data from multiple heterogeneous sources that support analytical reporting, structured and/or ad hoc queries, and decision-making.
+
+Data warehousing is a collection of \textit{decision support} technologies, aimed at enabling the \textit{knowledge worker} (executive, manager, analyst) to make better and faster decisions. Data mining potential can be enhanced if the appropriate data has been collected and stored in a data warehouse. A data
+warehouse is a relational database management system (RDBMS) designed specifically to meet the
+needs of transaction processing systems. It can be loosely defined as any centralized data repository
+which can be queried for business benefit. Data warehousing
+is a new powerful technique making it possible to extract archived operational data and overcome
+inconsistencies between different legacy data formats. As well as integrating data throughout an
+enterprise, regardless of location, format, or communication requirements it is possible to incorporate
+additional or expert information.
+
+In addition to a relational database, a data warehouse environment includes an extraction,
+transportation, transformation, and loading (ETL) solution, an online analytical processing (OLAP)
+engine, client analysis tools, and other applications that manage the process of gathering data and
+delivering it to business users.
+
+ETL Tools are meant to extract, transform and load the data into Data Warehouse for decision
+making. Before the evolution of ETL Tools, the above mentioned ETL process was done manually
+by using SQL code created by programmers. This task was tedious in many cases since it involved
+many resources, complex coding and more work hours. On top of it, maintaining the code placed
+a great challenge among the programmers.
+
+These difficulties are eliminated by ETL Tools since they are very powerful and they offer
+many advantages in all stages of ETL process starting from extraction, data cleansing, data profiling,
+transformation, debugging and loading into data warehouse when compared to the old method.
+
+A common way of introducing data warehousing is to refer to the characteristics of a data
+warehouse as set forth by William Inmon, author of Building the Data Warehouse and the guru who
+is widely considered to be the originator of the data warehousing concept, is as follows:
+\begin{multicols}{2}
+	\begin{itemize}
+		\item Subject Oriented
+		\item Integrated
+		\item Nonvolatile
+		\item Time Variant
+	\end{itemize}
+\end{multicols}
+
+
+Data warehouses are designed to help you analyze data. For example, to learn more about your
+company’s sales data, you can build a warehouse that concentrates on sales. Using this warehouse,
+you can answer questions like “Who was our best customer for this item last year?” This ability
+to define a data warehouse by subject matter, sales in this case, makes the data warehouse \textit{subject
+oriented}.
+
+Integration is closely related to subject orientation. Data warehouses must put data from
+disparate sources into a consistent format. They must resolve such problems as naming conflicts
+and inconsistencies among units of measure. When they achieve this, they are said to be \textit{integrated}.
+
+For instance, in one application, gender might be coded as “m” and “f” in another by 0 and 1. When
+data are moved from the operational environment into the data warehouse, they assume a consistent
+coding convention e.g. gender data is transformed to “m” and “f”.
+
+\textit{Nonvolatile} means that, once entered into the warehouse, data should not change. This is
+logical because the purpose of a warehouse is to enable you to analyze what has occurred.
+
+In order to discover trends in business, analysts need large amounts of data. This is very much
+in contrast to online transaction processing (OLTP) systems, where performance requirements
+demand that historical data be moved to an archive. A data warehouse’s focus on change over time
+is what is meant by the term \textit{time variant}. The data warehouse contains a place for storing data
+that are 10 to 20 years old, or older, to be used for comparisons, trends, and forecasting. These
+data are not updated.
+\subsection*{Data Mining}
+%Data mining is a process used to turn raw data into useful information. By using software to look for patterns in large batches of data, organization/businesses can learn more about their customers and develop more effective marketing strategies as well as increase sales and decrease costs. Data mining depends on effective data collection and warehousing as well as computer processing.
+
+The term data mining has been stretched beyond its limits to apply to any form of data analysis. 
+
+Extraction of interesting information or patterns from data in large databases is known as data
+mining. Data mining is concerned with the analysis of data and the use of software techniques for
+finding patterns and regularities in sets of data. It is the computer which is responsible for finding the patterns by identifying the underlying rules and features in the data. The idea is that it is possible
+to strike gold in unexpected places as the data mining software extracts patterns not previously
+discernable or so obvious that no-one has noticed them before.
+
+Data mining analysis tends to work from the data up and the best techniques are those
+developed with an orientation towards large volumes of data, making use of as much of the collected
+data as possible to arrive at reliable conclusions and decisions. The analysis process starts with a
+set of data, uses a methodology to develop an optimal representation of the structure of the data
+during which time knowledge is acquired. Once knowledge has been acquired this can be extended
+to larger sets of data working on the assumption that the larger data set has a structure similar to
+the sample data. Again this is analogous to a mining operation where large amounts of low-grade
+materials are sifted through in order to find something of value.
+
+\subsubsection*{Applications of Data Mining}
+Data mining has many and varied fields of application some of which are listed below.
+
+\paragraph*{Sales/Marketing}
+\begin{itemize}
+	\item Identify buying patterns from customers
+	\item Find associations among customer demographic characteristics
+	\item Predict response to mailing campaigns
+	\item Market basket analysis
+\end{itemize}
+
+\paragraph*{Banking}
+\begin{itemize}
+	\item Credit card fraudulent detection
+	\item Identify ‘loyal’ customers
+	\item Predict customers likely to change their credit card affiliation
+	\item Determine credit card spending by customer groups
+	\item Find hidden correlation’s between different financial indicators
+	\item Identify stock trading rules from historical market data
+\end{itemize}
+
+\paragraph*{Insurance and Health Care}
+\begin{itemize}
+	\item Claims analysis i.e., which medical procedures are claimed together
+	\item Predict which customers will buy new policies
+	\item Identify behavior patterns of risky customers
+	\item Identify fraudulent behavior
+\end{itemize}
+
+\paragraph*{Transportation}
+\begin{itemize}
+	\item Determine the distribution schedules among outlets
+	\item Analyze loading patterns
+\end{itemize}
+
+\paragraph*{Medicine}
+\begin{itemize}
+	\item Characterize patient behavior to predict office visits
+	\item Identify successful medical therapies for different illnesses
+\end{itemize}
+
+
+\section{National Data Warehouses: Census Data, Prices of Essential Commodities}
+A large number of national data warehouses can be identified from the existing
+data resources within the Central Bureau of Statistics.
+
+\subsection*{Census Data}
+The Central Bureau of Statistics compiles
+information of all individuals, villages, population groups, etc. This information
+is wide-ranging such as the individual-slip, a compilation of information of
+individual households. A data warehouse can be built from this database upon which OLAP
+techniques can be applied. Data mining also can be performed for analysis and
+knowledge discovery.
+
+As the census compilation is performed once in ten years, the data is
+quasi-static and, therefore, no refreshing of the warehouse needs to be done on
+a periodic basis. Only the new data needs to be either appended to the data
+warehouse or alternatively a new data warehouse can be built.
+
+There exist many other subject areas within the
+census purview which may be amenable and appropriate for data warehouse
+development, OLAP and data mining applications on which work can be taken
+up in the future.
+
+\subsubsection*{Central Bureau of Statistics (CBS)}
+National Statistical System (NSS) is the ensemble of statistical organizations and units within a country that collect, process and disseminate
+official statistics on behalf of national government. An effective and efficient national statistical system that
+provides regular and reliable data is an important indicator of good policies and a crucial component of good
+governance. Central Bureau of Statistics (CBS) is the nodal agency of Nepal to collect, compile and disseminate
+socio-economic data in Nepal. It is involved in conducting surveys and censuses since last six decades. A number of
+other Ministries and Government Agencies are also involved in producing statistics relevant to their field. Some of the collected statistics by CBS under NSS are:
+\begin{multicols}{2}
+\begin{itemize}
+	\item Census data
+	\item Health statistics
+	\item Educational statistics
+	\item Poverty measurement statistics
+	\item Civil registration and vital (birth, death, marriage, migration and divorce) statistics
+	\item Crime statistics
+	\item Tourism information statistics
+	\item Agriculture and rural development statistics
+	\item Trade statistics
+	\item Industrial statistics etc.
+\end{itemize}
+\end{multicols}
+
+
+\subsection*{Prices of Essential Commodities}
+The Ministry of Agriculture, Government of Nepal, compiles daily
+data. Essential commodities means all the basic things that are used in our day-to-day life like food items rice, pulse, oil, spices, vegetables, fruits etc and other costs like transportation cost, health and medicine cost, education cost etc. Government collects prices of those essentials from all over the country by their agent and forecast the average cost of those essential commodities. They also analyze those prices with last year data to know by how much the price is increased/decreased this year and may forecast what may be the price increase/decrease in next year. So it helps the plan and policymaker to improve the economic growth rate.
+
+
+
+\section{Other Areas for Data Warehousing and Data Mining}
+\subsection{Agriculture}
+The Agricultural Census performed by the Department Of Agriculture, Government
+of Nepal, compiles a large number of agricultural parameters at the national
+level. District-wise agricultural production, area and yield of crops is compiled;
+this can be built into a data warehouse for analysis, mining and forecasting.
+Statistics on consumption of fertilizers also can be turned into a data mart.
+
+Data on agricultural inputs such as seeds and fertilizers can also be
+effectively analyzed in a data warehouse. Data from livestock census can be
+turned into a data warehouse. Land-use pattern statistics can also be analyzed in
+a warehousing environment. Other data such as watershed details and also
+agricultural credit data can be effectively used for analysis by applying the
+technologies of OLAP and data mining.
+
+Thus there is substantial scope for application of data warehousing and
+data mining techniques in Agricultural sector.
+
+
+\subsection{Rural Development}
+Data on individuals below poverty line (BPL survey) can be built into a data
+warehouse. Drinking water census data (from Drinking Water Mission) can be
+effectively utilized by OLAP and data mining technologies. Monitoring and
+analysis of progress made on implementation of rural development programmes
+can also be made using OLAP and data mining techniques.
+
+\subsection{Health}
+Community needs assessment data, immunization data, data from national
+programmes on controlling blindness, leprosy, malaria can all be used for data
+warehousing implementation, OLAP and data mining applications.
+
+\subsection{Planning}
+At the Planning Commission, data warehouses can be built for state plan data
+on all sectors: labour, energy, education, trade and industry, five-year plan, etc.
+
+
+\subsection{Education}
+In education sector, data warehouse can be built to store large volume of historical data, analyze historical events, language research, educational status of the country, etc.
+
+
+\subsection{Commerce and Trade}
+Data bank on trade (imports and exports) can be analyzed and converted into
+a data warehouse. World price monitoring system can be made to perform
+better by using data warehousing and data mining technologies. Provisional
+estimates of import and export also be made more accurate using forecasting
+techniques.
+
+
+\subsection{Other Sectors}
+In addition to the above mentioned important applications, there exist a number
+of other potential application areas for data warehousing and data mining, as
+follows:
+
+\subsubsection*{Tourism}
+Tourist arrival behaviour and preferences; tourism products
+data; foreign exchange earnings data; and Hotels, Travel and Transportation
+data.
+\subsubsection*{Programme Implementation}
+Central projects data (for monitoring).
+
+\subsubsection*{Revenue}
+Customs data, central excise data, and commercial taxes data
+(state government).
+
+\subsubsection*{Economic affairs}
+Budget and expenditure data; and annual economic survey.
+
+\subsubsection*{Audit and accounts}
+All government departments or organizations are deeply involved in
+generating and processing a large amount of data. Conventionally, the
+government departments have largely been satisfied with developing single
+management information systems (MIS), or in limited cases, a few databases
+which were used online for limited reporting purposes. Much of the analysis
+work was done manually by the Department of Statistics in the Central
+Government or in any State Government. The techniques used for analysis were
+conventional statistical techniques on largely batch-mode processing. Prior to
+the advent of data warehousing and data mining technologies nobody was
+aware of any better techniques for this activity. In fact, data warehousing and
+data mining technologies could lead to the most significant advancements in
+the government functioning, if properly applied and used in the government
+activities. With their advent and prominence, there is a paradigm shift which
+may finally result in improved governance and better planning by better
+utilization of data. Instead of the officials wasting their time in processing data,
+they can rely on data warehousing and data mining technologies for their day
+to-day decision-making and concentrate more on the practical implementation
+of the decisions so taken for better performance of developmental activities.
+Further, even though various departments in the government (State or
+Central) are functionally interlinked, the data is presently generated. Maintained
+and used independently in each department. This leads to poor (independent)
+decision-making and isolated planning. Here in lies the importance of data
+warehousing technology. Different data marts for separate departments, if built,
+can be integrated into one data warehouse for the government. This is true for
+State Government and Central Government. Thus, data warehouses can be built
+at Central level, State level and also at District level.
+
+\newpage\thispagestyle{empty}

@@ -1,0 +1,104 @@
+% !TeX spellcheck = en_GB
+% !TEX TS-program = xelatex 
+\documentclass[a4paper, 12pt]{book}
+\usepackage{./sty-e_govrnment} %preamble
+
+
+%\usepackage[showframe]{geometry}
+% \usepackage[a4paper, total={6in, 9in}, showframe]{geometry}
+
+% \usepackage[
+%   % set width and height to a4 width and height + 6mm
+%   %a4 size: 21.0 x 29.7 cm
+%   a4,
+%   % use any combination of these options to add different cut markings
+%   cam, axes, frame, cross,
+%   % set the type of TeX renderer you use
+%   % center the contents
+%   center
+% ]{crop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           %
+%        Watermark          % 
+%                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage[nostamp]{draftwatermark}
+%\usepackage[]{draftwatermark}
+%
+%\SetWatermarkText{DRAFT}
+%\SetWatermarkScale{1.0}
+%\SetWatermarkAngle{45}
+
+
+%\includeonly{
+%	./chapters/chapter-1,
+%	./chapters/chapter-2, 
+%	./chapters/chapter-3, 
+%	./chapters/chapter-4,
+%	./chapters/chapter-5,
+%	./chapters/chapter-6,
+%	./chapters/chapter-7,
+%	./chapters/chapter-8,
+%	./chapters/chapter-9,
+%}
+
+
+\begin{document}
+% compile with latexmk 
+
+
+\frontmatter
+
+\include{./titlepage/title-page} \thispagestyle{empty}
+\phantomsection
+% \printglossary
+\include{./chapters/acronyms}\thispagestyle{empty}
+% \addcontentsline{toc}{chapter}{List of Acronyms} \cleardoublepage
+
+
+\tableofcontents \newpage\thispagestyle{empty}
+
+ \listoffigures \addcontentsline{toc}{chapter}{\listfigurename} \newpage \thispagestyle{empty}
+ 
+ 
+ \listoftables\addcontentsline{toc}{chapter}{List of Tables} \newpage \thispagestyle{empty}
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%										  %
+%		Include Chapters here		  	  %
+%										  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./chapters/chapter-1} % ch-1: Introduction 
+\include{./chapters/chapter-2} % ch-2: Public-Private Partnership for e-Government
+\include{./chapters/chapter-3} % ch-3: ICT Infrastructure for e-Government
+\include{./chapters/chapter-4} % ch-4: e-Government Readiness
+\include{./chapters/chapter-5} % ch-5: Security for e-Government
+\include{./chapters/chapter-6} % ch-6: Managing e-Government
+\include{./chapters/chapter-7} % ch-7: Implementing e-Government
+\include{./chapters/chapter-8} % ch-8: Data Warehousing and Data Mining in Government
+\include{./chapters/chapter-9} % ch-9: Case Studies \& Applications 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% questions
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Questions (2018 \& 2019)}
+\include{./chapters/questions}
+
+\backmatter
+
+
+ \nocite{*}
+ \renewcommand{\bibname}{References}
+ \phantomsection
+ \addcontentsline{toc}{chapter}{References} % add References to toc
+ \printbibliography %prints bibliography list
+ 
+
+
+\end{document}
